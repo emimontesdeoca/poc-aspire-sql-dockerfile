@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsAspireHost>true</IsAspireHost>
+    <UserSecretsId>9bde824d-93f3-4b29-b294-28e0ed3e8f70</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\pocdockerfilesql.ApiService\pocdockerfilesql.ApiService.csproj" />
+    <ProjectReference Include="..\pocdockerfilesql.Web\pocdockerfilesql.Web.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspire.Hosting.AppHost" Version="8.2.1" />
+	  <PackageReference Include="Aspire.Hosting.SqlServer" Version="8.2.1" />
+  </ItemGroup>
+
+</Project>
