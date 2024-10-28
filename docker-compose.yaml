@@ -27,7 +27,7 @@ services:
       OTEL_EXPORTER_OTLP_ENDPOINT: "http://aspire-dashboard:18889"
       OTEL_SERVICE_NAME: "apiservice"
     ports:
-    - target: 8080
+    - target: 8090
       published: 10000
     restart: unless-stopped
   webfrontend:
