@@ -1,13 +1,4 @@
 services:
-  aspire-dashboard:
-    container_name: "aspire-dashboard"
-    image: "mcr.microsoft.com/dotnet/aspire-dashboard:8.0"
-    environment:
-      DOTNET_DASHBOARD_UNSECURED_ALLOW_ANONYMOUS: "true"
-    ports:
-    - target: 18888
-      published: 18888
-    restart: unless-stopped
   sql:
     container_name: "sql"
     image: "mcr.microsoft.com/mssql/server:2022-latest"
