@@ -27,9 +27,9 @@ services:
       OTEL_EXPORTER_OTLP_ENDPOINT: "http://aspire-dashboard:18889"
       OTEL_SERVICE_NAME: "apiservice"
     ports:
-    - target: 8080
+    - target: 8081
       published: 10000
-    - target: 8443
+    - target: 8444
       published: 10001
     restart: unless-stopped
   webfrontend:
@@ -42,7 +42,7 @@ services:
       OTEL_DOTNET_EXPERIMENTAL_OTLP_RETRY: "in_memory"
       ASPNETCORE_FORWARDEDHEADERS_ENABLED: "true"
       HTTP_PORTS: "8080"
-      services__apiservice__http__0: "http://apiservice:8080"
+      services__apiservice__http__0: "http://apiservice:8081"
       OTEL_EXPORTER_OTLP_ENDPOINT: "http://aspire-dashboard:18889"
       OTEL_SERVICE_NAME: "webfrontend"
     ports:
